@@ -13,7 +13,7 @@ test('time to test a function', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderWorkshop({
-        name: 'sample',
+        name: 'samples',
         participants: [{ name : 'House Butter' }],
     });
 

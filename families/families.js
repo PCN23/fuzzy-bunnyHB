@@ -3,7 +3,7 @@ import { renderBunny } from '../render-utils.js';
 
 checkAuth();
 
-const familiesEl = document.querySelector('.families-container');
+const familiesEl = document.querySelector('main');
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {
@@ -11,8 +11,8 @@ logoutButton.addEventListener('click', () => {
 });
 
 async function displayFamilies() {
-    const familiesEl = document.querySelector('main');
     const families = await getFamilies();
+    familiesEl.textContent = '';
     
     for (let family of families) {
         const familyEl = document.createElement('div');
@@ -35,7 +35,7 @@ async function displayFamilies() {
                 displayFamilies();
             });
             bunniesEl.append(bunnyEl);
-        }
+        } 
         familyEl.append(bunniesEl, nameEl);
         familiesEl.append(familyEl);
     }

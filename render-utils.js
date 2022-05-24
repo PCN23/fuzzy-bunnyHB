@@ -4,13 +4,19 @@ export function renderBunny(families) {
     const h2 = document.createElement('h2');
     h2.textContent = families.name;
 
-    const ul = document.createElement('ul');
-    for (let bunny of families.loving_families){
-        const li = document.createElement('li');
-        li.textContent = `${bunny.name}`;
-        ul.append(li);
-    }
-    div.append(h2, ul);
+
+    div.append(h2);
 
     return div;
+}
+
+export function renderOption(families) {
+    const option = document.createElement('option');
+    option.value = families.id;
+    option.textContent = families.name;
+    return option;
+}
+
+export async function createBunny(bunnies) {
+    
 }

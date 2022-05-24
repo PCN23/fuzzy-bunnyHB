@@ -1,0 +1,25 @@
+.families-container {
+    height: 100px;
+    width: 300px;
+    border: 2px solid rgb(64, 255, 0);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+
+}
+
+.family {
+    border: 2px solid yellow;
+}
+
+.bunnies li:hover {
+    background-color: coral;
+    cursor: pointer;
+
+}
+
+#bunny li:hover::after {
+    padding-left:5px;
+    content: '☑️';
+}
